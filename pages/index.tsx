@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <MainLayout>
         <MetaTitle
-          title="Comics App | Website đọc truyện tranh"
+          title="AComics | Website đọc truyện tranh"
           description="Website được tạo bởi Nextjs"
           image="https://firebasestorage.googleapis.com/v0/b/nhattruyen-af981.appspot.com/o/Screenshot%202022-12-02%20094444.jpg?alt=media&token=adf77c98-b5fc-4b57-aa31-bf1530994db9"
         />

@@ -16,10 +16,12 @@ const TippyMenu = ({ children }: Tippys) => {
         offset={[12, 4]}
         placement="bottom-end"
         render={(attrs) => (
-          <div className="bg-white p-3" {...attrs}>
+          <div className="bg-white p-3 rounded-xl" {...attrs}>
             <div className="email">
               <p>{user.displayName}</p>
-              <button onClick={() => logOut()}>Đăng xuất</button>
+              <button className="mt-2" onClick={() => logOut()}>
+                Đăng xuất
+              </button>
             </div>
           </div>
         )}

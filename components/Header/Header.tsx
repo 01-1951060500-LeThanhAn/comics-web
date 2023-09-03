@@ -1,9 +1,10 @@
 import Link from "next/link";
 import React, { useState } from "react";
-
+import Logo from "../../public/logo.png";
 import { AiOutlineSearch } from "react-icons/ai";
 import useStore from "../../zustand";
 import TippyMenu from "../Tippy/TippyMenu";
+import Image from "next/image";
 
 const Navbar: React.FC = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -16,9 +17,12 @@ const Navbar: React.FC = () => {
           <div>
             <div className="flex items-center justify-between py-3 md:py-4 md:block">
               <Link href="/">
-                <h2 className="text-2xl font-semibold text-white my-auto">
-                  Comics App
-                </h2>
+                <div className="flex items-center">
+                  <Image width={40} height={40} src={Logo} alt="" />
+                  <h2 className="text-2xl font-semibold text-white my-auto">
+                    Comics
+                  </h2>
+                </div>
               </Link>
               <div className="md:hidden">
                 <button
@@ -95,10 +99,12 @@ const Navbar: React.FC = () => {
                 <li className="rounded-lg">
                   {user ? (
                     <TippyMenu>
-                      <img
+                      <Image
                         className=" w-12 h-12 rounded-full"
                         src={user?.photoURL}
                         alt={user.displayName}
+                        width={50}
+                        height={50}
                       />
                     </TippyMenu>
                   ) : (
